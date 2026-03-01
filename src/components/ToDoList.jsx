@@ -1,10 +1,12 @@
 import ToDoItem from "./ToDoItem";
 
-function ToDoList() {
+function ToDoList({ todoInputs }) {
   return (
     <>
       <h3>To Do List</h3>
-      <ToDoItem />
+      {todoInputs.map((data) => (
+        <ToDoItem todoItem={data} />
+      ))}
     </>
   );
 }

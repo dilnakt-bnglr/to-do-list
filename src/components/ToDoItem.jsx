@@ -1,7 +1,7 @@
-function ToDoItem() {
+function ToDoItem({ todoItem }) {
   return (
     <>
-      <h4>To Do Item</h4>
+      <h4>{todoItem}</h4>
     </>
   );
 }
