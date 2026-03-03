@@ -11,6 +11,7 @@ function ToDoItem({
   handleUpdate,
 }) {
   const [updatedInput, setUpdatedInput] = useState("");
+  const updatedTask = updatedInput ? updatedInput : todoItem.task;
 
   return (
     <>
@@ -20,12 +21,13 @@ function ToDoItem({
             <input
               type="text"
               className="edit-input"
+              value={updatedTask}
               onChange={(e) => setUpdatedInput(e.target.value)}
             />
           </div>
           <button
             className="update-btn"
-            onClick={() => handleUpdate(todoItem, updatedInput)}
+            onClick={() => handleUpdate(todoItem, updatedTask)}
           >
             Update
           </button>

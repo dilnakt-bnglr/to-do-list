@@ -27,6 +27,9 @@ function App() {
   };
 
   const handleEditTask = (taskToEdit) => {
+    if (taskToEdit.isCompleted) {
+      return;
+    }
     const editTask = toDoTask.map((task) => {
       if (task.id === taskToEdit.id) {
         task.isEditable = true;
@@ -37,6 +40,9 @@ function App() {
   };
 
   const handleUpdate = (taskToUpdate, updatedTask) => {
+    if (!updatedTask) {
+      return;
+    }
     const updated = toDoTask.map((task) => {
       if (task.id === taskToUpdate.id) {
         task.task = updatedTask;
