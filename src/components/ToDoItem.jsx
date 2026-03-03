@@ -5,9 +5,10 @@ import { FaEdit } from "react-icons/fa";
 function ToDoItem({ todoItem, handleDeleteTask, handleCompleted }) {
   return (
     <div className="todoitem">
-      <span>
+      <div className="todotask">
         <input
           type="checkbox"
+          className="input-check"
           checked={todoItem.isCompleted}
           onClick={(event) => handleCompleted(todoItem, event)}
         />
@@ -18,10 +19,15 @@ function ToDoItem({ todoItem, handleDeleteTask, handleCompleted }) {
         ) : (
           <>{todoItem.task}</>
         )}
-      </span>
+      </div>
       <div className="editdelete-icon">
-        <FaEdit />
-        <MdDeleteForever onClick={() => handleDeleteTask(todoItem)} />
+        <FaEdit
+          className={`edit-icon ${todoItem.isCompleted ? "disabled" : ""}`}
+        />
+        <MdDeleteForever
+          className="delete-icon"
+          onClick={() => handleDeleteTask(todoItem)}
+        />
       </div>
     </div>
   );
