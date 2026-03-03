@@ -1,30 +1,58 @@
 .todoitem {
   display: flex;
   justify-content: space-between;
-  border: 1px solid palegreen;
+  border: 2px solid palegreen;
   height: 35px;
   border-radius: 10px;
   margin-top: 10px;
- .todotask{
-  padding: 6px;
- }
+  .todotask {
+    padding: 6px;
+  }
 }
 
-.input-check{
+.input-check {
   cursor: pointer;
 }
 
-.editdelete-icon{
+.editdelete-icon {
   padding: 8px;
   font-size: 20px;
-  .edit-icon{
+  .edit-icon {
     cursor: pointer;
   }
-  .delete-icon{
+  .delete-icon {
     cursor: pointer;
   }
 }
 
-.disabled{
+.disabled {
   cursor: not-allowed !important;
+}
+
+.edit-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  border: 2px solid maroon;
+  border-radius: 10px;
+  height: 35px;
+  .todotask {
+    width: 100%;
+    padding: 8px;
+  }
+}
+
+.edit-input {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  padding: 4px;
+}
+
+.update-btn {
+  border-radius: 50%;
+  background: darkcyan;
+  color: white;
+  font-weight: bold;
+  border: none;
 }

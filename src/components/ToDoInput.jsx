@@ -12,6 +12,7 @@ function ToDoInput({ tasks, setToDoTask }) {
         id: currentTask.length + 1,
         task: input,
         isCompleted: false,
+        isEditable: false,
       };
       currentTask.push(newTask);
       setToDoTask(currentTask);

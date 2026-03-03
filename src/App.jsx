@@ -25,6 +25,28 @@ function App() {
 
     setToDoTask(completedTask);
   };
+
+  const handleEditTask = (taskToEdit) => {
+    const editTask = toDoTask.map((task) => {
+      if (task.id === taskToEdit.id) {
+        task.isEditable = true;
+      }
+      return task;
+    });
+    setToDoTask(editTask);
+  };
+
+  const handleUpdate = (taskToUpdate, updatedTask) => {
+    const updated = toDoTask.map((task) => {
+      if (task.id === taskToUpdate.id) {
+        task.task = updatedTask;
+        task.isEditable = false;
+      }
+      return task;
+    });
+    setToDoTask(updated);
+  };
+
   return (
     <div className="main-container">
       <div className="content">
@@ -34,6 +56,8 @@ function App() {
           todoInputs={toDoTask}
           handleDeleteTask={handleDeleteTask}
           handleCompleted={handleCompleted}
+          handleEditTask={handleEditTask}
+          handleUpdate={handleUpdate}
         />
       </div>
     </div>
