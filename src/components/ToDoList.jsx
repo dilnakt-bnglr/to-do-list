@@ -1,11 +1,14 @@
 import ToDoItem from "./ToDoItem";
 
-function ToDoList({ todoInputs }) {
+function ToDoList({ todoInputs, handleDeleteTask, handleCompleted }) {
   return (
     <>
-      <h3>To Do List</h3>
-      {todoInputs.map((data) => (
-        <ToDoItem todoItem={data} />
+      {todoInputs.map((task) => (
+        <ToDoItem
+          todoItem={task}
+          handleDeleteTask={handleDeleteTask}
+          handleCompleted={handleCompleted}
+        />
       ))}
     </>
   );

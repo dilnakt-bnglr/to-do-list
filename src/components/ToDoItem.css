@@ -1,0 +1,17 @@
+.todoitem {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid palegreen;
+  height: 35px;
+  border-radius: 10px;
+  margin-top: 10px;
+  span {
+    display: block;
+    padding: 8px;
+  }
+}
+
+.editdelete-icon{
+  padding: 8px;
+  font-size: 20px;
+}

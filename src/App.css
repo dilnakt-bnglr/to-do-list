@@ -1,0 +1,14 @@
+.main-container{
+  width: 100%;
+}
+
+.content{
+    width: 40%;
+    margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+    .content{
+        width: 100%;
+    }
+}

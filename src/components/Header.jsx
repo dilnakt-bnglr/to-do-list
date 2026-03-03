@@ -1,7 +1,7 @@
 function Header() {
   return (
     <>
-      <h2>Your To Do List</h2>
+      <h2 style={{ textAlign: "center" }}>Your To Do </h2>
     </>
   );
 }
